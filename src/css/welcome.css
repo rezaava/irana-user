@@ -1,0 +1,30 @@
+footer {
+  display: none !important;
+}
+
+nav {
+  display: none;
+}
+
+@media only screen and (max-width: 500px) {
+  .login-box-login {
+    height: 100dvh;
+    width: 100dvw;
+  }
+}
+
+.welcome-box {
+  width: 100%;
+}
+.welcome-img {
+  width: 100%;
+}
+
+/* تصویر ثابت در گوشه بالا چپ */
+.fixed-top-left {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  z-index: 1050;
+}

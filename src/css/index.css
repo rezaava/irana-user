@@ -1,0 +1,62 @@
+body {
+  font-family: "Vazir", "IRANSans", sans-serif;
+  background-color: #f5f7fa;
+}
+
+.fixed-top-left {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 60px;
+  z-index: 1050;
+}
+.number-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background-color: #e9ecef;
+  border-radius: 50%;
+  font-weight: 500;
+  color: #495057;
+  margin-left: 14px;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* اسکرول برای جدول شهرها */
+.scrollable-table {
+  max-height: 220px;
+  overflow-y: auto;
+  display: block;
+}
+
+.scrollable-table table {
+  width: 100%;
+  display: table;
+}
+
+/* اسکرول برای لیست تعمیرکاران */
+.scrollable-list {
+  max-height: 280px;   /* ارتفاع بیشتر برای نمایش بهتر لیست */
+  overflow-y: auto;
+}
+
+/* استایل اسکرول بار (اختیاری) */
+.scrollable-table::-webkit-scrollbar,
+.scrollable-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scrollable-table::-webkit-scrollbar-thumb,
+.scrollable-list::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.scrollable-table::-webkit-scrollbar-track,
+.scrollable-list::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}

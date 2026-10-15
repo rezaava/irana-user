@@ -1,0 +1,488 @@
+/* =========================
+   Header
+========================= */
+
+.request-top-bar {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.request-top-icon {
+  color: #ee817c;
+  font-size: 25px;
+}
+
+.request-back-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid #777;
+  background: #fff;
+  color: #777;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.request-back-btn:hover {
+  background: #f5f5f5;
+  transform: translateX(2px);
+}
+
+.request-back-btn:active {
+  transform: translateX(0) scale(0.95);
+}
+
+
+/* =========================
+   Information Boxes
+========================= */
+
+.request-detail-box {
+  width: 100%;
+  min-height: 60px;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 12px;
+
+  margin-bottom: 10px;
+  padding: 0px 8px;
+
+  display: flex;
+  align-items: center;
+  gap: 13px;
+
+  background: #fff;
+
+  transition:
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.request-detail-box:hover {
+  border-color: #b8b8b8;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================
+   Main Icon
+========================= */
+
+.request-detail-icon {
+  width: 32px;
+  min-width: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #2d288e;
+  font-size: 22px;
+}
+
+
+/* =========================
+   Text
+========================= */
+
+.request-detail-text {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.request-detail-title {
+  font-weight: 700;
+  color: #171717;
+  white-space: nowrap;
+}
+
+.request-detail-value {
+  color: #222;
+  font-weight: 400;
+}
+
+.request-status {
+  color: #55a9c0 !important;
+}
+
+
+/* =========================
+   Action Buttons
+   Copy / Profile / Call
+========================= */
+
+.request-detail-action {
+  width: 35px;
+  min-width: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: auto;
+}
+
+.detail-action-btn {
+  position: relative;
+
+  width: 34px;
+  height: 34px;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+  color: #2d288e;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 19px;
+
+  cursor: pointer;
+
+  border-radius: 50%;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.detail-action-btn:hover {
+  background: #f0efff;
+  color: #242074;
+  transform: scale(1.08);
+}
+
+.detail-action-btn:active {
+  transform: scale(0.92);
+}
+
+
+/* =========================
+   Call Button
+========================= */
+
+.call-action {
+  color: #2d288e;
+}
+
+.call-action:hover {
+  color: #238a55;
+  background: #eefaf3;
+}
+
+
+/* =========================
+   Copied State
+========================= */
+
+.detail-action-btn.copied {
+  color: #42a66b;
+  background: #eefaf3;
+}
+
+
+/* =========================
+   Copy Tooltip
+========================= */
+
+.copy-tooltip {
+  position: absolute;
+
+  right: 40px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  white-space: nowrap;
+
+  padding: 4px 8px;
+
+  border-radius: 6px;
+
+  background: #333;
+  color: #fff;
+
+  font-size: 11px;
+  line-height: 1.5;
+
+  z-index: 20;
+
+  pointer-events: none;
+
+  animation: copyTooltipAnimation 0.2s ease;
+}
+
+@keyframes copyTooltipAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) translateX(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
+  }
+}
+
+
+/* =========================
+   Receipt
+========================= */
+
+.request-receipt-box {
+  min-height: 225px;
+  align-items: flex-start;
+}
+
+.request-receipt-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.request-receipt-title {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.request-receipt-image {
+  width: 255px;
+  max-width: 100%;
+
+  height: 190px;
+
+  object-fit: contain;
+
+  border-radius: 10px;
+
+  background: #f4f4f4;
+
+  border: 1px solid #eee;
+
+  display: block;
+}
+
+
+/* =========================
+   Related Requests
+========================= */
+
+.related-section {
+  margin-top: 75px;
+}
+
+.related-title {
+  font-size: 16px;
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.related-empty {
+  text-align: center;
+
+  color: #aaa;
+
+  font-size: 14px;
+
+  margin-bottom: 38px;
+}
+
+.related-empty-icon {
+  font-size: 25px;
+
+  margin-bottom: 8px;
+
+  color: #aaa;
+}
+
+
+/* =========================
+   Add Related Request
+========================= */
+
+.related-add-btn {
+  width: 100%;
+  height: 54px;
+
+  border: none;
+  border-radius: 16px;
+
+  background: #4d83ed;
+  color: #fff;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 8px rgba(77, 131, 237, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.related-add-btn:hover {
+  background: #4075df;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 14px rgba(77, 131, 237, 0.28);
+}
+
+.related-add-btn:active {
+  transform: translateY(1px);
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 576px) {
+
+  .request-details-page {
+    padding: 5px 10px 100px;
+  }
+
+
+  /* Header */
+
+  .request-top-bar {
+    height: 55px;
+    margin-bottom: 8px;
+  }
+
+  .request-top-icon {
+    font-size: 23px;
+  }
+
+  .request-back-btn {
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+  }
+
+
+  /* Boxes */
+
+  .request-detail-box {
+    min-height: 73px;
+
+    padding: 11px 12px;
+
+    border-radius: 12px;
+
+    gap: 10px;
+  }
+
+
+  /* Main icon */
+
+  .request-detail-icon {
+    width: 30px;
+    min-width: 30px;
+
+    font-size: 21px;
+  }
+
+
+  /* Text */
+
+  .request-detail-text {
+    font-size: 14px;
+    gap: 6px;
+    line-height: 1.8;
+  }
+
+
+  /* Action */
+
+  .request-detail-action {
+    width: 33px;
+    min-width: 33px;
+  }
+
+  .detail-action-btn {
+    width: 32px;
+    height: 32px;
+
+    font-size: 18px;
+  }
+
+
+  /* Tooltip */
+
+  .copy-tooltip {
+    right: 37px;
+    font-size: 10px;
+  }
+
+
+  /* Receipt */
+
+  .request-receipt-box {
+    min-height: 225px;
+  }
+
+  .request-receipt-image {
+    width: 250px;
+    height: 185px;
+  }
+
+
+  /* Related */
+
+  .related-section {
+    margin-top: 70px;
+  }
+
+  .related-title {
+    font-size: 15px;
+  }
+
+  .related-empty {
+    font-size: 13px;
+  }
+
+  .related-add-btn {
+    height: 52px;
+
+    border-radius: 15px;
+
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,56 @@
+ .custom-input {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   height: 56px;
+   background: #ffffff;
+   border: 1px solid #e5e7eb;
+   border-radius: 14px;
+   padding: 0 12px;
+   transition: all 0.2s ease;
+   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+ .custom-input:focus-within {
+   border-color: #86b7fe;
+   box-shadow:
+     0 0 0 3px rgba(13, 110, 253, 0.08),
+     0 4px 12px rgba(13, 110, 253, 0.06);
+}
+ .custom-icon {
+   width: 38px;
+   height: 38px;
+   min-width: 38px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #e0e0e6;
+   border-radius: 10px;
+   margin-left: 10px;
+   font-size: 15px;
+}
+ .custom-input input,
+ .custom-input select {
+   width: 100%;
+   height: 100%;
+   border: none;
+   outline: none;
+   background: transparent;
+   text-align: right;
+   direction: rtl;
+   color: #212529;
+   font-size: 14px;
+   font-weight: 500;
+}
+ .custom-input input::placeholder {
+   color: #9ca3af;
+   font-weight: 400;
+}
+ .custom-input select {
+   cursor: pointer;
+}
+ .custom-input select:invalid {
+   color: #9ca3af;
+ }
+ .btn-sub {
+   background: #939394;
+ }

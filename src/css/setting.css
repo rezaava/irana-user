@@ -1,0 +1,15 @@
+
+:root {
+  --bar-dark: #161616;
+  --bar-dark-2: #0a0a0a;
+  --muted: #8a8a8a;
+  --page-bg-1: #d6ccc6;
+  --page-bg-2: #a89e98;
+  --accent-1: #ff9a4d;
+  --accent-2: #ff7a1a;
+}
+
+.icon-color {
+  font-size: 1.2rem;
+  color: #183153;
+}

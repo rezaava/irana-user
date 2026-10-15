@@ -1,0 +1,17 @@
+.story-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+}
+
+.story-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+#root {
+    padding-bottom: 100px;
+}

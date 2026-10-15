@@ -1,0 +1,222 @@
+:root {
+  --bar-dark: #2196f3;
+  --bar-dark-2: #1976d2;
+  --muted: #bbdefb;
+  --page-bg-1: #ffffff;
+  --page-bg-2: #e8f4ff;
+  --accent-1: #64b5f6;
+  --accent-2: #42a5f5;
+}
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap");
+.app-container {
+  font-family: "Vazirmatn", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Vazirmatn", sans-serif;
+}
+
+body {
+  margin-bottom: 100px;
+}
+
+.text-limited {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-primary {
+  color: #1976d2 !important;
+}
+
+.btn-primary {
+  background: linear-gradient(
+    180deg,
+    var(--bar-dark) 0%,
+    var(--bar-dark-2) 100%
+  );
+  border-color: var(--bar-dark);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, #42a5f5 0%, #2196f3 100%);
+  border-color: #2196f3;
+}
+
+.btn-outline-primary {
+  --bs-btn-color: #1976d2 !important;
+  --bs-btn-border-color: #1976d2 !important;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #2196f3 !important;
+  --bs-btn-hover-border-color: #2196f3 !important;
+}
+
+.app-container {
+  font-family: "Poppins", "Segoe UI", Tahoma, sans-serif;
+  background: linear-gradient(
+    180deg,
+    var(--page-bg-1) 0%,
+    var(--page-bg-2) 100%
+  );
+  min-height: 100dvh;
+  max-width: 480px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  padding: 0 0 20px 0;
+}
+
+.page-header {
+  padding: 28px 20px 10px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.page-header h1 {
+  color: #1565c0;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+}
+
+.page-header p {
+  color: #607d9b;
+  font-size: 12.5px;
+  margin-top: 4px;
+}
+
+.page-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 20px;
+  color: #607d9b;
+}
+
+.content-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(66, 165, 245, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 300px;
+  color: #2196f3;
+  transition: all 0.3s ease;
+}
+
+.content-label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1976d2;
+}
+
+.nav-outer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0 15px 10px;
+  z-index: 1000;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.dark-navbar {
+  background: linear-gradient(
+    180deg,
+    var(--bar-dark) 0%,
+    var(--bar-dark-2) 100%
+  );
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 20px 6px;
+  box-shadow: rgba(33, 150, 243, 0.35) 0px 4px 15px;
+  position: relative;
+  overflow: visible;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  flex: 1;
+  z-index: 2;
+}
+
+.nav-item .icon-circle {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.nav-item i {
+  font-size: 16px;
+  transition: all 0.35s ease;
+  color: var(--muted);
+}
+
+.nav-item span {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  transition:
+    color 0.35s ease,
+    font-weight 0.35s ease;
+  color: var(--muted);
+  line-height: 1;
+}
+
+.nav-item.active .icon-circle {
+  position: absolute;
+  top: -30px;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(180deg, #ffffff 0%, #e8f4ff 100%);
+  box-shadow:
+    -5px 1px 15px rgba(33, 150, 243, 0.25),
+    5px 1px 15px rgba(255, 255, 255, 0.8);
+}
+
+.nav-item.active i {
+  font-size: 1.5rem;
+  color: #2196f3;
+  text-shadow: 0 0 12px rgba(100, 181, 246, 0.4);
+}
+
+.nav-item.active span {
+  color: #ffffff;
+  font-weight: 700;
+  padding-top: 30px;
+  padding-bottom: 5px;
+}
+
+.nav-item:not(.active):active i,
+.nav-item:not(.active):active span {
+  color: #ffffff;
+}
+
+.container {
+  max-width: 460px;
+}
